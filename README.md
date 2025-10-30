@@ -1,50 +1,96 @@
-<!--
- * @Author: elonfreedom elonfreedom@qq.com
- * @Date: 2025-10-30 13:58:08
- * @LastEditors: elonfreedom elonfreedom@qq.com
- * @LastEditTime: 2025-10-30 14:02:44
- * @FilePath: /GodenPrice/README.md
- * @Description: 
- * 
- * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
--->
 # GodenPrice
 
-This repository contains the GodenPrice iOS app and its widget extension.
-
-Documentation is available in multiple languages. Choose the language file below:
-
-- English: `README_en.md`
-- 中文（简体）: `README_zh.md`
-
-If you'd like another language added (e.g., Japanese), tell me which language and I'll add it.
-# GodenPrice
-
-[English](#english) | [中文](#中文)
-
-
-## <a id="english"></a>English
+> This README defaults to English. 阅读中文请见 `README_zh.md`。
 
 A simple and elegant iOS app for tracking real-time gold prices in multiple currencies and units.
 
-### Features
+## Features
 
+- 📊 Real-time Gold Prices: Fetch current gold prices from GoldPrice.org API
+- 💱 Multiple Units: Support for USD per ounce ($/oz) and CNY per gram (¥/g)
+- 🔄 Manual Refresh: Update prices on demand with a single tap
+- 📱 Widget Support: Live Activity and widgets for quick price checks
+- ⚙️ Persistent Settings: Your preferred unit is saved between app launches
+- 🎨 Modern UI: Built with SwiftUI for a native iOS experience
 
-### Requirements
+## Requirements
 
+- iOS 17.0+
+- Xcode 15.0+
+- Swift 5.9+
 
-### Installation
+## Installation
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/elonfreedom/GodenPrice.git
-   # GodenPrice
 
-   This repository contains the GodenPrice iOS app and its widget extension.
+```bash
+git clone https://github.com/elonfreedom/GodenPrice.git
+cd GodenPrice
+```
 
-   Documentation is available in multiple languages. Choose the language file below:
+1. Open the project in Xcode:
 
-   - English: `README_en.md`
-   - 中文（简体）: `README_zh.md`
+```bash
+open GodenPrice.xcodeproj
+```
 
-   If you'd like another language added (e.g., Japanese), tell me which language and I'll add it.
+1. Select your target device or simulator.
+
+1. Build and run the project (⌘R).
+
+## Usage
+
+### Main App
+
+The app consists of two main tabs:
+
+1. **Price Tab** — Displays the current gold price in your selected unit. Tap the "Refresh" button to update the price; it also loads automatically on launch.
+2. **Settings Tab** — Configure your preferred display unit (USD/oz or CNY/g). Settings are persisted and shared with widgets.
+
+### Widgets
+
+- Widgets automatically update with current gold prices and respect your unit preference.
+
+## Architecture
+
+MVVM (Model-View-ViewModel):
+
+- Views: `ContentView.swift`, `PriceTabView.swift`, `SettingsTabView.swift`
+- ViewModel: `GoldPriceViewModel.swift`
+- Widgets: `CurrentPrice` extension
+
+## API
+
+Uses GoldPrice.org API:
+
+- Endpoint: `https://data-asg.goldprice.org/dbXRates/{CURRENCY}`
+- Supports USD and CNY
+- Returns price per troy ounce; the app converts to per gram when showing CNY/g
+
+## App Group (Important)
+
+To share the user's unit preference between the app and the widget, enable an App Group for both the main app target and the widget extension. Update the `appGroupID` constant in the widget code to match your App Group identifier (for example: `group.com.yourcompany.GodenPrice`).
+
+## Project Structure
+
+```text
+GodenPrice/
+├── GodenPrice/              # Main app
+│   ├── Views/              # SwiftUI views
+│   ├── ViewModels/         # Business logic
+   ├── GodenPriceApp.swift # App entry point
+   └── ContentView.swift   # Main view
+├── CurrentPrice/           # Widget extension
+├── GodenPriceTests/        # Unit tests
+├── GodenPriceUITests/      # UI tests
+└── GodenPrice.xcodeproj/   # Xcode project
+```
+
+## License
+
+MIT
+
+## Acknowledgments
+
+- Gold price data provided by [GoldPrice.org](https://goldprice.org)
+- Created by elon (2025)
