@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB1470012EB1CC6C003DE683 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB146FDF2EB1BE8E003DE683 /* WidgetKit.framework */; };
+		DB1470022EB1CC6C003DE683 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB146FE12EB1BE8F003DE683 /* SwiftUI.framework */; };
+		DB1470132EB1CC6D003DE683 /* CurrentPriceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB1470002EB1CC6C003DE683 /* CurrentPriceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DB146FBD2EB1BD5D003DE683 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,47 @@
 			remoteGlobalIDString = DB146FAC2EB1BD5C003DE683;
 			remoteInfo = GodenPrice;
 		};
+		DB1470112EB1CC6D003DE683 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB146FA52EB1BD5C003DE683 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB146FFF2EB1CC6C003DE683;
+			remoteInfo = CurrentPriceExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB146FF82EB1BE90003DE683 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB1470132EB1CC6D003DE683 /* CurrentPriceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DB146FAD2EB1BD5C003DE683 /* GodenPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodenPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB146FBC2EB1BD5D003DE683 /* GodenPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GodenPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB146FC62EB1BD5D003DE683 /* GodenPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GodenPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB146FDF2EB1BE8E003DE683 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DB146FE12EB1BE8F003DE683 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DB1470002EB1CC6C003DE683 /* CurrentPriceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CurrentPriceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DB1470142EB1CC6D003DE683 /* Exceptions for "CurrentPrice" folder in "CurrentPriceExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DB146FFF2EB1CC6C003DE683 /* CurrentPriceExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DB146FAF2EB1BD5C003DE683 /* GodenPrice */ = {
@@ -43,6 +83,14 @@
 		DB146FC92EB1BD5D003DE683 /* GodenPriceUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GodenPriceUITests;
+			sourceTree = "<group>";
+		};
+		DB1470032EB1CC6C003DE683 /* CurrentPrice */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DB1470142EB1CC6D003DE683 /* Exceptions for "CurrentPrice" folder in "CurrentPriceExtension" target */,
+			);
+			path = CurrentPrice;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB146FFD2EB1CC6C003DE683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1470022EB1CC6C003DE683 /* SwiftUI.framework in Frameworks */,
+				DB1470012EB1CC6C003DE683 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +135,8 @@
 				DB146FAF2EB1BD5C003DE683 /* GodenPrice */,
 				DB146FBF2EB1BD5D003DE683 /* GodenPriceTests */,
 				DB146FC92EB1BD5D003DE683 /* GodenPriceUITests */,
+				DB1470032EB1CC6C003DE683 /* CurrentPrice */,
+				DB146FDE2EB1BE8E003DE683 /* Frameworks */,
 				DB146FAE2EB1BD5C003DE683 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +147,18 @@
 				DB146FAD2EB1BD5C003DE683 /* GodenPrice.app */,
 				DB146FBC2EB1BD5D003DE683 /* GodenPriceTests.xctest */,
 				DB146FC62EB1BD5D003DE683 /* GodenPriceUITests.xctest */,
+				DB1470002EB1CC6C003DE683 /* CurrentPriceExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DB146FDE2EB1BE8E003DE683 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB146FDF2EB1BE8E003DE683 /* WidgetKit.framework */,
+				DB146FE12EB1BE8F003DE683 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +171,12 @@
 				DB146FA92EB1BD5C003DE683 /* Sources */,
 				DB146FAA2EB1BD5C003DE683 /* Frameworks */,
 				DB146FAB2EB1BD5C003DE683 /* Resources */,
+				DB146FF82EB1BE90003DE683 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DB1470122EB1CC6D003DE683 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DB146FAF2EB1BD5C003DE683 /* GodenPrice */,
@@ -163,6 +234,28 @@
 			productReference = DB146FC62EB1BD5D003DE683 /* GodenPriceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DB146FFF2EB1CC6C003DE683 /* CurrentPriceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB1470152EB1CC6D003DE683 /* Build configuration list for PBXNativeTarget "CurrentPriceExtension" */;
+			buildPhases = (
+				DB146FFC2EB1CC6C003DE683 /* Sources */,
+				DB146FFD2EB1CC6C003DE683 /* Frameworks */,
+				DB146FFE2EB1CC6C003DE683 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DB1470032EB1CC6C003DE683 /* CurrentPrice */,
+			);
+			name = CurrentPriceExtension;
+			packageProductDependencies = (
+			);
+			productName = CurrentPriceExtension;
+			productReference = DB1470002EB1CC6C003DE683 /* CurrentPriceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +277,9 @@
 						CreatedOnToolsVersion = 26.0.1;
 						TestTargetID = DB146FAC2EB1BD5C003DE683;
 					};
+					DB146FFF2EB1CC6C003DE683 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 				};
 			};
 			buildConfigurationList = DB146FA82EB1BD5C003DE683 /* Build configuration list for PBXProject "GodenPrice" */;
@@ -203,6 +299,7 @@
 				DB146FAC2EB1BD5C003DE683 /* GodenPrice */,
 				DB146FBB2EB1BD5D003DE683 /* GodenPriceTests */,
 				DB146FC52EB1BD5D003DE683 /* GodenPriceUITests */,
+				DB146FFF2EB1CC6C003DE683 /* CurrentPriceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DB146FC42EB1BD5D003DE683 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB146FFE2EB1CC6C003DE683 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +357,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB146FFC2EB1CC6C003DE683 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +376,11 @@
 			isa = PBXTargetDependency;
 			target = DB146FAC2EB1BD5C003DE683 /* GodenPrice */;
 			targetProxy = DB146FC72EB1BD5D003DE683 /* PBXContainerItemProxy */;
+		};
+		DB1470122EB1CC6D003DE683 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB146FFF2EB1CC6C003DE683 /* CurrentPriceExtension */;
+			targetProxy = DB1470112EB1CC6D003DE683 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,6 +654,66 @@
 			};
 			name = Release;
 		};
+		DB1470162EB1CC6D003DE683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S25LUGR55;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CurrentPrice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CurrentPrice;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChuYiShiWu.GodenPrice.CurrentPrice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB1470172EB1CC6D003DE683 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S25LUGR55;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CurrentPrice/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CurrentPrice;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ChuYiShiWu.GodenPrice.CurrentPrice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +749,15 @@
 			buildConfigurations = (
 				DB146FD72EB1BD5D003DE683 /* Debug */,
 				DB146FD82EB1BD5D003DE683 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB1470152EB1CC6D003DE683 /* Build configuration list for PBXNativeTarget "CurrentPriceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB1470162EB1CC6D003DE683 /* Debug */,
+				DB1470172EB1CC6D003DE683 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
